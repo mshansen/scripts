@@ -14,14 +14,14 @@ for(( t=0; t<${#ARRAY[@]}; t++))
 do
 
 	echo $home
-	echo $t				# print current iteration
+	echo $t			# print current iteration
 	echo ${ARRAY[$t]}	# print path t
 	echo ${ARRAY1[$t]}	# print file t
 	# length of the element located at index t
 	x=${#ARRAY1[$t]}
 	# removes last six characters (.fastq) from element located at index t
 	BASE=${ARRAY1[$t]:0:$x-6}
-	echo $BASE			# print file without ".fastq"
+	echo $BASE		# print file without ".fastq"
 
 	# run ConDeTri
 	perl ~/softWare/ConDeTri/condetri_v2.2.pl -fastq1=${ARRAY[$t]} -prefix=$BASE -hq=25 -lq=10 -frac=.8 -minlen=50 -mh=30 -ml=5 -sc=33
@@ -44,7 +44,7 @@ ARRAY3=(`find $home -name '*_trim.fastq' -exec basename {} \;`)
 for(( t=0; t<${#ARRAY2[@]}; t++))                                                       
 do                                                                                      
 
-	echo $t				# print current iteration
+	echo $t			# print current iteration
 	echo ${ARRAY2[$t]}	# print path t
 	# length of the element located at index t
 	x=${#ARRAY2[$t]}
