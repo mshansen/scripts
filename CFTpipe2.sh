@@ -55,7 +55,7 @@ do
 
 	# add RSEM to the shell
 	echo '#run RSEM' >> $home/$BASE/$BASE"_Trinity.sh"
-	echo "perl $c1/apps/trinity/r20131110/util/RSEM_util/run_RSEM_align_n_estimate.pl --transcripts $home/$BASE/trinity_out_dir/Trinity.fasta --seqType fq --single $home/$BASE/$BASE'_m50_hq25_lq10_frac80_mh30_ml5_sc33.fq" >> $home/$BASE/$BASE"_Trinity.sh"
+	echo "perl $c1/apps/trinity/r20131110/util/RSEM_util/run_RSEM_align_n_estimate.pl --transcripts $home/$BASE/trinity_out_dir/Trinity.fasta --seqType fq --single $home/$BASE/"$BASE"_m50_hq25_lq10_frac80_mh30_ml5_sc33.fq" >> $home/$BASE/$BASE"_Trinity.sh"
 
 	# make Trinity shell executable
 	chmod u+x $home/$BASE/$BASE"_Trinity.sh"
