@@ -14,7 +14,7 @@ declare -i count=0
 while(( $tran != 0 ))
 do
 	#count the number of lines that have "seq1", "seq2", "seq3", etc. in them
-	tran=$(grep -c "seq$num" Trinity.fasta.component_to_trans_map)
+	tran=$(grep -c "seq$num " Trinity.fasta)
 	declare -i filter[$count]=$tran
 	
 	#output the number number of lines that have "seq1", "seq2", "seq3", etc. in them
